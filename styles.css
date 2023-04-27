@@ -349,6 +349,11 @@ button:hover {
   .numbers,
   .text {
     font-size: 33px;
-    margin-bottom: 45px;
+  }
+
+  .yearsCalculation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 }
