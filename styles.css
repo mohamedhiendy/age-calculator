@@ -48,7 +48,7 @@ body {
   overflow: hidden;
   transition: all 0.3s;
 
-  font-size: 7px;
+  font-size: 15px;
   color: var(--light-red);
 }
 
@@ -58,7 +58,7 @@ body {
 
 .error.active.empty .empty-error,
 .error.active.validation .validation-error {
-  min-height: 19px;
+  height: auto;
 }
 
 .container {
@@ -66,7 +66,7 @@ body {
 
   width: 44vw;
 
-  height: 70vh;
+  height: auto;
 
   padding: 58px;
 
@@ -162,13 +162,14 @@ button {
   z-index: 1;
 }
 
+svg {
+  width: 47px;
+  height: 50px;
+}
+
 button:hover {
   background-color: var(--off-black);
 }
-
-/* .yearsCalculation {
-  margin-top: 50px;
-} */
 
 .yearsCalculation p {
   margin-bottom: -40px;
@@ -189,6 +190,165 @@ button:hover {
 
 .text {
   color: var(--off-black);
+}
 
-  /* margin-bottom: -40px; */
+/* Media Queries For Smaller Desktop Screens */
+@media screen and (max-width: 1519px) {
+  .container {
+    height: auto;
+
+    padding-bottom: 80px;
+  }
+
+  input::placeholder {
+    padding: unset;
+    font-size: 25px;
+  }
+
+  button {
+    width: 90px;
+    height: 90px;
+  }
+
+  .numbers,
+  .text {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 1281px) {
+  .container {
+    padding: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  label {
+    font-size: 15px;
+  }
+
+  input {
+    height: 60px;
+    font-size: 24px;
+  }
+
+  input::placeholder {
+    padding-left: 5px;
+    font-size: 20px;
+  }
+
+  hr {
+    margin-top: 40px;
+  }
+
+  button {
+    width: 75px;
+    height: 75px;
+  }
+
+  .numbers,
+  .text {
+    font-size: 60px;
+  }
+
+  .yearsCalculation p {
+    margin-bottom: -20px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  input {
+    font-size: 22px;
+  }
+
+  input::placeholder {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-top: 40px;
+    padding-right: 15px;
+    padding-bottom: 80px;
+    padding-left: 22px;
+
+    width: 92%;
+    height: auto;
+  }
+
+  label {
+    font-size: 20px;
+  }
+
+  .dayInput,
+  .monthInput,
+  .yearInput {
+    width: 100%;
+  }
+
+  input {
+    width: 23.5vw;
+    height: 80px;
+  }
+
+  .dayInput,
+  .monthInput {
+    margin-right: 5.5%;
+  }
+
+  .spacing {
+    position: relative;
+    margin-top: 100px;
+
+    margin-bottom: 60px;
+  }
+
+  hr {
+    margin-top: 0px;
+    width: 100%;
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 90px;
+    height: 95px;
+  }
+
+  svg {
+    width: 38px;
+    height: 30px;
+  }
+
+  .numbers,
+  .text {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 461px) {
+  button {
+    width: 80px;
+    height: 80px;
+  }
+
+  .spacing {
+    margin-top: 50px;
+
+    margin-bottom: 50px;
+  }
+
+  .numbers {
+    margin-right: 10px;
+  }
+
+  .numbers,
+  .text {
+    font-size: 33px;
+    margin-bottom: 45px;
+  }
 }
