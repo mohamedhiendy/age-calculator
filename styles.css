@@ -1,0 +1,188 @@
+:root {
+  /* Primary Colors */
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+
+  /* Neutral Colors */
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+
+  /* Fonts */
+  --font-size-used: 32px;
+  --font-family-used: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+
+  font-family: var(--font-family-used);
+
+  font-weight: 400;
+  line-height: 1.5;
+
+  color: var(--off-black);
+  background-color: var(--light-grey);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error .empty-error,
+.error .validation-error {
+  height: 0;
+  min-height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+
+  font-size: 7px;
+  color: var(--light-red);
+}
+
+.error.active input {
+  border-color: var(--light-red);
+}
+
+.error.active.empty .empty-error,
+.error.active.validation .validation-error {
+  min-height: 19px;
+}
+
+.container {
+  background-color: var(--white);
+
+  min-width: 45%;
+  max-width: 65%;
+  width: 360px;
+
+  min-height: 60%;
+
+  padding: 27px;
+
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.dayInput,
+.monthInput,
+.yearInput {
+  width: 22%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.dayInput,
+.monthInput {
+  margin-right: 4%;
+}
+
+.birthday {
+  display: flex;
+  flex-direction: row;
+
+  height: calc(100% + 20px);
+}
+
+label {
+  font-size: 8px;
+  font-weight: 700;
+
+  color: var(--smokey-grey);
+
+  margin-bottom: 3px;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+
+  border: 1px solid var(--light-grey);
+  border-radius: 4px;
+
+  padding: 11px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::placeholder {
+  color: var(--smokey-grey);
+
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.spacing {
+  display: flex;
+  flex-direction: row-reverse;
+
+  margin-bottom: -15px;
+}
+
+hr {
+  width: 90%;
+  height: 0px;
+
+  color: var(--light-grey);
+  margin-top: 25px;
+}
+
+button {
+  border: none;
+  background-color: var(--purple);
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  z-index: 1;
+}
+
+button:hover {
+  background-color: var(--off-black);
+}
+
+.yearsCalculation p {
+  margin-bottom: -15px;
+}
+
+.numbers {
+  color: var(--purple);
+
+  font-size: 50px;
+  font-weight: 900;
+  font-style: italic;
+
+  margin-right: 10px;
+}
+
+.text {
+  color: var(--off-black);
+  font-size: 50px;
+  font-weight: 900;
+  font-style: italic;
+
+  margin-bottom: -20px;
+}

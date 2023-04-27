@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- The Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Page Title -->
+    <title>Age Calculator App</title>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- JavaScript Link -->
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="birthday">
+          <div class="dayInput error">
+            <label for="day">DAY</label>
+            <input class="birth day" type="number" id="day" placeholder="DD" />
+            <p class="empty-error">This field is required</p>
+            <p class="validation-error">Must be a valid day</p>
+          </div>
+
+          <div class="monthInput error">
+            <label for="month">MONTH</label>
+            <input
+              class="birth month"
+              type="number"
+              id="month"
+              placeholder="MM"
+            />
+            <p class="empty-error">This field is required</p>
+            <p class="validation-error">Must be a valid month</p>
+          </div>
+
+          <div class="yearInput error">
+            <label for="year">YEAR</label>
+            <input
+              class="birth year"
+              type="number"
+              id="year"
+              placeholder="YYYY"
+            />
+            <p class="empty-error">This field is required</p>
+            <p class="validation-error">Must be a valid year</p>
+          </div>
+        </div>
+
+        <div class="spacing">
+          <button type="submit" class="arrowIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="42"
+              viewBox="0 0 46 44"
+            >
+              <g fill="none" stroke="#FFF" stroke-width="2">
+                <path
+                  d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+                />
+              </g>
+            </svg>
+          </button>
+          <hr />
+        </div>
+      </form>
+
+      <div class="yearsCalculation">
+        <p>
+          <span class="finalyears numbers">--</span
+          ><span class="text">years</span>
+        </p>
+        <p>
+          <span class="finalmonths numbers">--</span
+          ><span class="text">months</span>
+        </p>
+        <p>
+          <span class="finaldays numbers">--</span
+          ><span class="text">days</span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
